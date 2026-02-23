@@ -1,8 +1,8 @@
-const autoprefixer = require('autoprefixer');
-const { purgeCSSPlugin } = require('@fullhuman/postcss-purgecss');
-const whitelister = require('purgecss-whitelister');
+import autoprefixer from 'autoprefixer';
+import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
+// import whitelister from 'purgecss-whitelister';
 
-module.exports = {
+export default {
     plugins: [
         autoprefixer(),
         purgeCSSPlugin({
@@ -57,7 +57,7 @@ module.exports = {
                 'page-item',
                 'page-link',
                 'not-content',
-                ...whitelister(['./assets/scss/**/*.scss', './node_modules/@thulite/doks-core/assets/scss/components/_code.scss', './node_modules/@thulite/doks-core/assets/scss/components/_expressive-code.scss', './node_modules/@thulite/doks-core/assets/scss/common/_syntax.scss'])
+                // ...whitelister(['./assets/scss/**/*.scss', './node_modules/@thulite/doks-core/assets/scss/components/_code.scss', './node_modules/@thulite/doks-core/assets/scss/components/_expressive-code.scss', './node_modules/@thulite/doks-core/assets/scss/common/_syntax.scss'])
             ]
         })
     ]
